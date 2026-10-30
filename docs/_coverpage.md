@@ -1,6 +1,4 @@
-<!-- _coverpage.md -->
+# V2Ray API Core
 
-# V2ray API Core<small>1.1</small>
-
-[GitHub](https://github.com/mobinjavari/v2ray-api-php/)
+[GitHub](https://github.com/xraytools/v2ray-api-php/)
 [Get Started](/how-to-use)

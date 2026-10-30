@@ -1,2 +1,2 @@
-* [Home](/)
-* [Doc](/how-to-use)
+- [Home](/)
+- [Doc](/how-to-use)

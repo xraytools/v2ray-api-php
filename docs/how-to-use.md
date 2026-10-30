@@ -1,18 +1,19 @@
 # Clone
+
 In the first step, we clone the project file on our local system through git
 
 Run the following code in Terminal or Console ( Note that git must be installed on your system )
 
-```php
-git clone https://github.com/mobinjavari/v2ray-api-php.git
+```bash
+git clone https://github.com/xraytools/v2ray-api-php.git
 ```
 
-<br><br>
+# xui Connect
 
-# xui Connect   
 An api interface to connect to x-ui and 3x-ui panels and perform receiving, adding, editing and deleting operations
 
-> ## Class 
+> ## Class
+>
 > Create an instance of the xuiConnect class
 
 <table>
@@ -73,6 +74,7 @@ An api interface to connect to x-ui and 3x-ui panels and perform receiving, addi
 </table>
 
 > ## Properties
+>
 > Guide to using properties
 
 <table>
@@ -82,14 +84,14 @@ An api interface to connect to x-ui and 3x-ui panels and perform receiving, addi
         <th>🧾 Description</th>
     </tr>
     <tr align="center">
-        <td align="left"><a href="https://mobinjavari.github.io/v2ray-api-php/#/how-to-use?id=server-status">status</a></td>
+        <td align="left"><a href="#/how-to-use?id=server-status">status</a></td>
         <td>array</td>
         <td>It returns the status of the server, including upload and download information, etc. in the form of an array</td>
     </tr>
 </table>
 
-
 > ## Functions
+>
 > Guide to using functions
 
 <table>
@@ -100,25 +102,25 @@ An api interface to connect to x-ui and 3x-ui panels and perform receiving, addi
         <th>🧾 Description</th>
     </tr>
     <tr align="center">
-        <td align="left"><a href="https://mobinjavari.github.io/v2ray-api-php/#/how-to-use?id=set-default-protocol">setDefaultProtocol</a></td>
+        <td align="left"><a href="#/how-to-use?id=set-default-protocol">setDefaultProtocol</a></td>
         <td><code>$protocol</code> (string)</td>
         <td>void</td>
         <td>Changing the default protocol value, values <code>vless</code> , <code>vmess</code> , <code>trojan</code> can be used.</td>
     </tr>
     <tr align="center">
-        <td align="left"><a href="https://mobinjavari.github.io/v2ray-api-php/#/how-to-use?id=set-default-transmission">setDefaultTransmission</a></td>
+        <td align="left"><a href="#/how-to-use?id=set-default-transmission">setDefaultTransmission</a></td>
         <td><code>$transmission</code> (string)</td>
         <td>void</td>
         <td>Changing the default transmission value, values <code>ws</code>, <code>tcp</code> can be used.</td>
     </tr>
     <tr align="center">
-        <td align="left"><a href="https://mobinjavari.github.io/v2ray-api-php/#/how-to-use?id=set-default-header">setDefaultHeader</a></td>
+        <td align="left"><a href="#/how-to-use?id=set-default-header">setDefaultHeader</a></td>
         <td><code>$header</code> (string)</td>
         <td>void</td>
         <td>To change the default header, used in the config link</td>
     </tr>
     <tr align="center">
-        <td align="left"><a href="https://mobinjavari.github.io/v2ray-api-php/#/how-to-use?id=id=set-sniffing">setSniffing</a></td>
+        <td align="left"><a href="#/how-to-use?id=set-sniffing">setSniffing</a></td>
         <td>
             <code>$enable</code> (bool) <br>
             <code>$destOverride</code> (array)
@@ -127,13 +129,13 @@ An api interface to connect to x-ui and 3x-ui panels and perform receiving, addi
         <td>Setting the sniffing value receives a boolean value in the first input and an array containing <code>http</code>, <code>tls</code>, <code>quic</code>... in the second input.</td>
     </tr>
     <tr align="center">
-        <td align="left"><a href="https://mobinjavari.github.io/v2ray-api-php/#/how-to-use?id=delete-cookie">deleteCookie</a></td>
+        <td align="left"><a href="#/how-to-use?id=delete-cookie">deleteCookie</a></td>
         <td> - </td>
         <td>void</td>
         <td>To delete the set cookie (used if the speed of sending and receiving information is slow)</td>
     </tr>
     <tr align="center">
-        <td align="left"><a href="https://mobinjavari.github.io/v2ray-api-php/#/how-to-use?id=create-url">createUrl</a></td>
+        <td align="left"><a href="#/how-to-use?id=create-url">createUrl</a></td>
         <td>
             <code>$where</code> (array)
             <br>
@@ -142,10 +144,8 @@ An api interface to connect to x-ui and 3x-ui panels and perform receiving, addi
         <td>array</td>
         <td>It is used to create the url (config link) of the user, in the first input, the provided value is used to bet the user's key information (<code>uuid</code>, <code>email</code>, <code>port</code>...) and in the second input, it takes the personalized remark value, which is by default has the <code>null</code> value</td>
     </tr>
-    <tr align="center"><td></td><td></td><td></td><td></td></tr>
-    <tr align="center"><td></td><td></td><td></td><td></td></tr>
     <tr align="center">
-        <td align="left"><a href="https://mobinjavari.github.io/v2ray-api-php/#/how-to-use?id=add-user">add</a></td>
+        <td align="left"><a href="#/how-to-use?id=add-user">add</a></td>
         <td>
             <code>$total</code> (float)
             <br>
@@ -161,7 +161,7 @@ An api interface to connect to x-ui and 3x-ui panels and perform receiving, addi
         <td>It is used to add a user to the panel, the <code>$total</code> input gets the volume in gigabytes, the input <code>$expiryDays</code> receives the expiration date as a number such as 30 days, the default value is 0, which means infinity., <code>$xuiRemark</code> input is <code>0</code> (Chinese,..) for panels.</td>
     </tr>
     <tr align="center">
-        <td align="left"><a href="https://mobinjavari.github.io/v2ray-api-php/#/how-to-use?id=update-user">update</a></td>
+        <td align="left"><a href="#/how-to-use?id=update-user">update</a></td>
         <td>
             <code>$update</code> (array)
             <br>
@@ -171,13 +171,13 @@ An api interface to connect to x-ui and 3x-ui panels and perform receiving, addi
         <td>Used to update user information, <code>$update</code> entry contains an array of changes, <code>$where</code> entry contains an array that specifies It allows the update to be applied to which user or users</td>
     </tr>
     <tr align="center">
-        <td align="left"><a href="https://mobinjavari.github.io/v2ray-api-php/#/how-to-use?id=fetch-user">fetch</a></td>
+        <td align="left"><a href="#/how-to-use?id=fetch-user">fetch</a></td>
         <td><code>$where</code> (array)</td>
         <td>array</td>
         <td>Used to get user information, the <code>$fetch</code> entry takes an array of unique user information and returns the first user found.</td>
     </tr>
     <tr align="center">
-        <td align="left"><a href="https://mobinjavari.github.io/v2ray-api-php/#/how-to-use?id=delete-user">delete</a></td>
+        <td align="left"><a href="#/how-to-use?id=delete-user">delete</a></td>
         <td>
             <code>$where</code> (array)
             <br>
@@ -189,9 +189,10 @@ An api interface to connect to x-ui and 3x-ui panels and perform receiving, addi
 </table>
 
 > ## Examples
+>
 > Guide to php code snippets to use the class
 
-* ### <small>Instance</small>
+### Instance
 
 ```php
 $serverAddress = 'api://example.org:54321/'; # Server Address:Port
@@ -203,43 +204,43 @@ $panel = 1; # Panel Type x-ui (0) / 3x-ui (1)
 $xui = new xuiConnect($serverAddress, $tunnelServerAddress, $username, $password, $panel);
 ```
 
-* ### <small>Server Status</small>
+### Server Status
 
 ```php
 print_r($xui->status);
 ```
 
-* ### <small>Set Default Protocol</small>
+### Set Default Protocol
 
 ```php
 $xui->setDefaultProtocol('vmess'); # vmess / vless / trojan
 ```
 
-* ### <small>Set Default Transmission</small>
+### Set Default Transmission
 
 ```php
 $xui->setDefaultTransmission('ws'); # tcp / ws
 ```
 
-* ### <small>Set Default Header</small>
+### Set Default Header
 
 ```php
 $xui->setDefaultHeader('wikipedia.org');
 ```
 
-* ### <small>Set Sniffing</small>
+### Set Sniffing
 
 ```php
 $xui->setSniffing(true, ['http','tls','quic']);
 ```
 
-* ### <small>Delete Cookie</small>
+### Delete Cookie
 
 ```php
 $xui->deleteCookie();
 ```
 
-* ### <small>Create Url</small>
+### Create Url
 
 ```php
 $where = [
@@ -252,11 +253,11 @@ $where = [
     // 'remark' => 'userRemark',
     // 'password' => 'userPassword', # Just for trojan
 ];
-print_r($xui->createUrl($where, 'MyRemarkName')); 
+print_r($xui->createUrl($where, 'MyRemarkName'));
 
 ```
 
-* ### <small>Add User</small>
+### Add User
 
 ```php
 $total = 10; # GB / Unlimited (0)
@@ -268,7 +269,7 @@ $xuiRemark = 'userRemark'; # Just for x-ui (0)
 print_r($xui->add($total, $expiryDays, $protocol, $transmission, $xuiRemark));
 ```
 
-* ### <small>Update User</small>
+### Update User
 
 ```php
 $update = [ # Unlimited (0)
@@ -293,7 +294,7 @@ $where = [
 print_r($xui->update($update, $where));
 ```
 
-* ### <small>Fetch User</small>
+### Fetch User
 
 ```php
 $where = [
@@ -310,7 +311,7 @@ $where = [
 print_r($xui->fetch($update));
 ```
 
-* ### <small>Delete User</small>
+### Delete User
 
 ```php
 $where = [
@@ -330,15 +331,15 @@ $toDate = time() - (60 * 60 * 24) * (10 /* Days */);
 print_r($xui->delete($where, $toDate));
 ```
 
-<br><br>
-
 # xui Tools
+
 Tools to convert the format and date, time and tools to check the server and IP
 
 > ## Examples
+>
 > Examples for using the xuiTools class
 
-* ### <small>Gen QR Code</small>
+### Gen QR Code
 
 ```php
 $text = 'vmess://...';
@@ -347,7 +348,7 @@ $htmlClassName = 'MyHtmlClassName';
 print_r(xuiTools::genQRCode($text, $htmlClassName))
 ```
 
-* ### <small>Build Url</small>
+### Build Url
 
 ```php
 $parseUrl = [
@@ -361,7 +362,7 @@ $parseUrl = [
 echo(xuiTools::buildUrl($parseUrl));
 ```
 
-* ### <small>Read Url</small>
+### Read Url
 
 ```php
 $url = 'vless://user@example.org:1111?query#remark';
@@ -369,7 +370,7 @@ $url = 'vless://user@example.org:1111?query#remark';
 print_r(xuiTools::readUrl($url));
 ```
 
-* ### <small>Format Bytes</small>
+### Format Bytes
 
 ```php
 $size = 1024;
@@ -380,7 +381,7 @@ $arrayReturn = true; # Separate the unit with the value of the type of presentat
 print_r(xuiTools::formatBytes($size, $format, $precision, $arrayReturn));
 ```
 
-* ### <small>Format Time</small>
+### Format Time
 
 ```php
 $seconds = 60 * 60 * 24 * 10 /* Days */;
@@ -390,7 +391,7 @@ $arrayReturn = true; # Separate the unit with the value of the type of presentat
 print_r(xuiTools::formatTime($seconds, $format, $arrayReturn));
 ```
 
-* ### <small>Get IP Address Location</small>
+### Get IP Address Location
 
 ```php
 $address = '8.8.8.8'; # GOOGLE DNS
@@ -399,7 +400,7 @@ $isDomain = false; # IP (False) / Domain (True)
 print_r(xuiTools::getIPAddressLocation($address, $isDomain));
 ```
 
-* ### <small>Http Status</small>
+### Http Status
 
 ```php
 $code = 200; # Http Code
@@ -411,7 +412,7 @@ $object = [
 print_r(xuiTools::httpStatus($code, $message, $object));
 ```
 
-* ### <small>New Log</small>
+### New Log
 
 ```php
 $errorNote = 'Crash Project';
@@ -419,19 +420,19 @@ $errorNote = 'Crash Project';
 echo(xuiTools::newLog($errorNote));
 ```
 
-* ### <small>Random UUID</small>
+### Random UUID
 
 ```php
 echo(xuiTools::randUUID());
 ```
 
-* ### <small>Random Port</small>
+### Random Port
 
 ```php
 echo(xuiTools::randPort());
 ```
 
-* ### <small>Random String</small>
+### Random String
 
 ```php
 $length = 4; # Characters Length
@@ -439,7 +440,7 @@ $length = 4; # Characters Length
 echo(xuiTools::randStr($length));
 ```
 
-* ### <small>Format Server Url</small>
+### Format Server Url
 
 ```php
 $url = 'api://example.com:443/';

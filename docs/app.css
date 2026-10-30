@@ -1,252 +1,288 @@
-.cover {
-    background: var(--light-grad-pink-blue, radial-gradient(ellipse at 40% 0%, #bf39894b 0, transparent 75%), radial-gradient(ellipse at 60% 0%, #096dde44 0, transparent 75%)) !important;
+:root {
+  --docs-background: #fff;
+  --docs-sidebar-background: #f8fafc;
+  --docs-text: #34495e;
+  --docs-muted: #526477;
+  --docs-border: #d8dee7;
+  --docs-code-background: #f3f5f7;
+  --docs-accent: #0969da;
+  --docs-cover-background:
+    radial-gradient(ellipse at 40% 0%, #bf398925, transparent 75%),
+    radial-gradient(ellipse at 60% 0%, #096dde25, transparent 75%);
+}
+
+body {
+  background: var(--docs-background);
+  color: var(--docs-text);
 }
 
 section.cover {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  background: var(--docs-cover-background) !important;
+  border-bottom: 1px solid var(--docs-border);
+  color: var(--docs-text);
+}
+
+section.cover .cover-main {
+  margin: 0 24px;
+}
+
+section.cover h1,
+section.cover h1 a,
+section.cover h1 .anchor span {
+  color: var(--docs-text);
+}
+
+section.cover .cover-main > p:last-child a {
+  border-color: var(--docs-accent);
+  color: var(--docs-accent);
+}
+
+section.cover .cover-main > p:last-child a:last-child {
+  background: var(--docs-accent);
+  color: #fff;
 }
 
 .content {
-    padding: 60px 0;
+  padding: 72px 0 48px;
+}
+
+.markdown-section {
+  max-width: 1100px;
+  min-width: 0;
+  padding: 24px 40px;
+  overflow-wrap: break-word;
+}
+
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4,
+.markdown-section strong,
+.markdown-section .anchor span {
+  color: var(--docs-text);
+}
+
+.markdown-section a,
+.app-nav a:hover,
+.app-nav a.active {
+  color: var(--docs-accent);
+}
+
+.markdown-section blockquote {
+  border-color: var(--docs-accent);
+  color: var(--docs-muted);
+}
+
+.markdown-section h1:not(:first-child) {
+  margin-top: 2.5em;
 }
 
 .sidebar {
-    padding: 28px 0 0;
+  background: var(--docs-sidebar-background);
+  border-color: var(--docs-border);
+  padding-top: 28px;
 }
 
-.sidebar-toggle {
-    background-color: transparent !important;
-    width: auto !important;
-    margin: 6px;
-}
-
-.sidebar-toggle span {
-    border-radius: 20px;
+.sidebar > h1,
+.sidebar ul li a,
+.app-nav {
+  color: var(--docs-text);
 }
 
 .sidebar ul li a {
-    font-size: 16px;
+  font-size: 15px;
+}
+
+.sidebar ul li.active > a {
+  color: var(--docs-accent);
 }
 
 .sidebar .sidebar-nav {
-    padding: 30px 0;
+  padding: 24px 0 64px;
+}
+
+.sidebar-toggle,
+body.close .sidebar-toggle {
+  position: fixed;
+  top: calc(16px + env(safe-area-inset-top, 0px));
+  bottom: auto;
+  left: calc(16px + env(safe-area-inset-left, 0px));
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--docs-border);
+  border-radius: 10px;
+  background: var(--docs-code-background);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+  transition: border-color 0.15s;
+}
+
+.sidebar-toggle:hover {
+  border-color: var(--docs-accent);
+}
+
+.sidebar-toggle .sidebar-toggle-button,
+.sidebar-toggle:hover .sidebar-toggle-button {
+  display: grid;
+  gap: 4px;
+  opacity: 1;
+}
+
+.sidebar-toggle span {
+  width: 18px;
+  height: 2px;
+  margin: 0;
+  background: var(--docs-accent);
+  border-radius: 1px;
+}
+
+.markdown-section pre,
+.markdown-section code {
+  background: var(--docs-code-background);
+  border-radius: 6px;
 }
 
 .markdown-section pre {
-    border-radius: 10px;
+  border: 1px solid var(--docs-border);
+  border-radius: 10px;
+  overflow: auto;
 }
 
-.markdown-section code {
-    border-radius: 5px;
+.markdown-section pre > code {
+  color: var(--docs-text);
+  white-space: pre;
+  overflow-wrap: normal;
 }
 
-.markdown-section> :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) code {
-    line-height: 2;
+.markdown-section :not(pre) > code {
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .docsify-copy-code-button {
-    border-radius: 0 10px 0 10px !important;
+  border-radius: 0 10px 0 10px !important;
 }
 
-.gt-container {
-    padding-bottom: 30px;
+.markdown-section table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
-.gt-container .gt-avatar img {
-    border-radius: 12px;
+.markdown-section th,
+.markdown-section td {
+  border-color: var(--docs-border);
+  padding: 12px 16px;
 }
 
-.gt-container .gt-header-textarea {
-    border-radius: 10px;
+.markdown-section th {
+  background: var(--docs-code-background);
+  text-align: left;
 }
 
-.gt-container .gt-popup .gt-action {
-    margin: 12px 0;
+.markdown-section table code,
+.markdown-section th:first-child,
+.markdown-section td:first-child,
+.markdown-section td:first-child a {
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
-.gt-container .gt-popup {
-    top: 38px;
-    padding: 0;
+.markdown-section th:first-child,
+.markdown-section td:first-child {
+  min-width: 12rem;
 }
 
-.gt-container .gt-popup .gt-action.is--active:before {
-    top: 8px;
+.markdown-section th:last-child,
+.markdown-section td:last-child {
+  min-width: 16rem;
 }
 
-.gt-container .gt-copyright {
-    margin: 0 0.9375em 0.5em;
-    padding: 9px 0 8px 0;
+.markdown-section tr {
+  border-color: var(--docs-border);
 }
 
-.gt-container .gt-header-textarea:hover,
-.gt-container .gt-header-textarea:focus {
-    border-color: #58a6ff;
-    -webkit-box-shadow: 0 0.625em 3.75em 0 #58a6ff27;
-    box-shadow: 0 0.625em 3.75em 0 #58a6ff27;
+.markdown-section tr:nth-child(2n) {
+  background: var(--docs-code-background);
 }
 
-.gt-container .gt-popup {
-    border-radius: 10px;
+.github-corner svg {
+  color: var(--docs-background);
 }
 
-.gt-container .gt-comments-null {
-    margin: 0;
-    padding: 22px 0 !important;
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--docs-accent);
+  outline-offset: 4px;
 }
 
-.gt-container .gt-comment-admin .gt-comment-content {
-    border: 1px solid #0000001a;
-    border-radius: 10px;
-}
+@media (max-width: 768px) {
+  .content {
+    padding-top: 64px;
+  }
 
-.gt-container .gt-comment-content {
-    border: 1px solid #0000001a;
-    border-radius: 10px;
-}
+  .markdown-section {
+    padding: 16px 20px;
+  }
 
-.gt-container .gt-comment-content:hover {
-    -webkit-box-shadow: 0 0.625em 3.75em 0 #58a6ff17;
-    box-shadow: 0 0.625em 3.75em 0 #58a6ff17;
-}
+  .markdown-section th,
+  .markdown-section td {
+    min-width: 120px;
+    padding: 10px 12px;
+  }
 
-.markdown-body blockquote {
-    border-color: #58a6ff;
-    border-radius: 3px;
-}
-
-.gt-container .gt-comment-body {
-    font-size: 14px;
-    margin: 16px 0 0;
-}
-
-.docsify-pagination-container {
-    display: none !important;
+  .markdown-section pre {
+    padding: 16px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        color-scheme: dark;
-    }
+  :root {
+    color-scheme: dark;
+    --docs-background: #0d1117;
+    --docs-sidebar-background: #010409;
+    --docs-text: #c9d1d9;
+    --docs-muted: #a5b1bf;
+    --docs-border: #30363d;
+    --docs-code-background: #161b22;
+    --docs-accent: #79b8ff;
+    --docs-cover-background:
+      radial-gradient(ellipse at 40% 0%, #bf398935, transparent 75%),
+      radial-gradient(ellipse at 60% 0%, #096dde2e, transparent 75%);
+  }
 
-    body {
-        /* background: var(--light-grad-pink-blue, radial-gradient(ellipse at 40% 0%, #bf398910 0, transparent 75%), radial-gradient(ellipse at 60% 0%, #096bde10 0, transparent 75%)) !important; */
-        background-color: #0d1117;
-        color: #c9d1d9;
-    }
+  .markdown-section code {
+    color: #ffb4a9;
+  }
 
-    .cover {
-            background: var(--light-grad-pink-blue, radial-gradient(ellipse at 40% 0%, #bf398935 0, transparent 75%), radial-gradient(ellipse at 60% 0%, #096dde2e 0, transparent 75%)) !important;
-    }
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: #9aa7b5;
+  }
 
-    section.cover {
-        border-bottom: 1px solid rgb(255 255 255 / 7%);
-        color: #fff;
-    }
+  .token.punctuation {
+    color: #c9d1d9;
+  }
 
-    .anchor span {
-        color: #c9d1d9 !important;
-    }
+  .token.keyword,
+  .token.operator {
+    color: #ffab70;
+  }
 
-    .sidebar {
-        background-color: #010409;
-        border-color: #ffffff24;
-    }
+  .token.string,
+  .token.attr-value {
+    color: #a5d6ff;
+  }
 
-    .sidebar>h1 {
-        color: #eee !important;
-    }
-
-    .markdown-section code,
-    .markdown-section pre {
-        background-color: #161b22;
-    }
-
-    .markdown-section pre>code {
-        color: #afafaf;
-    }
-
-    .github-corner svg {
-        color: #0d1117;
-    }
-
-    .docsify-pagination-container {
-        border-color: #ffffff24 !important;
-    }
-
-    .gt-container .gt-header-textarea {
-        background-color: #010409;
-        border: 1px solid #30363d;
-    }
-
-    .gt-container .gt-header-preview {
-        border-radius: 10px;
-        background-color: #010409;
-        border: 1px solid #30363d;
-    }
-
-    .gt-container .gt-header-textarea:hover,
-    .gt-container .gt-header-textarea:focus {
-        background-color: #0d1117;
-        -webkit-box-shadow: 0 0.625em 3.75em 0 #58a6ff17;
-        box-shadow: 0 0.625em 3.75em 0 #58a6ff17;
-    }
-
-    .gt-container .gt-meta {
-        border-color: #30363d;
-    }
-
-    .gt-container .gt-svg svg {
-        fill: #6190e8 !important;
-    }
-
-    .gt-container .gt-popup {
-        background-color: #161b22;
-        border: 1px solid #ffffff24;
-    }
-
-    .gt-container a.is--active {
-        color: #c9d1d9;
-    }
-
-    .gt-container .gt-btn-preview:hover {
-        background-color: #2a2f37;
-        border-color: #81a6ed30;
-    }
-
-    .gt-container .gt-btn-preview {
-        background-color: #21262d;
-        border-color: #81a6ed30;
-        color: #cacaca;
-    }
-
-    .markdown-body {
-        color: #c9d1d9;
-    }
-
-    .markdown-section tr:nth-child(2n) {
-        background-color: #161b22;
-    }
-
-    .markdown-section th {
-        border: 1px solid #ffffff24;
-    }
-
-    .markdown-section td {
-        border: 1px solid #ffffff24;
-    }
-
-    .gt-container .gt-comment-admin .gt-comment-content {
-        background-color: #010409;
-        border: 1px solid #ffffff3d;
-    }
-
-    .gt-container .gt-comment-content {
-        background-color: #010409;
-        border: 1px solid #ffffff3d;
-        border-radius: 10px;
-    }
-
-    .gt-container .gt-comment-body {
-        color: #c9d1d9 !important;
-    }
+  .token.function,
+  .token.class-name {
+    color: #d2a8ff;
+  }
 }
